@@ -7,7 +7,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-apikeys.py
+
 .DS_Store
 # C extensions
 *.so

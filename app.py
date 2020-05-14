@@ -8,7 +8,6 @@ from sklearn.cluster import MiniBatchKMeans
 app = Flask(__name__)
 CORS(app, support_credentials=True)
 app.config["DEBUG"] = True
-
 secret_key = apikey()
 
 
