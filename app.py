@@ -33,20 +33,21 @@ def fit_and_inference(dataframe, number_of_days):
 
     else:
         predicted_labels= [0]*len(dataframe)
-
     return predicted_labels + 1
 
 
 
 
-@app.route('/')
+@app.route('/',methods=["GET"])
 def hello_world():
-    return 'Houston,we are a go!'
+    print("hello")
+    return jsonify({"cool":"hello"})
 
 
 @app.route('/generate', methods=['POST'])
 def generate_itinerary():
     response_final = get_location_attributes(request.form.get('location'))
+    print(request.form.get("location"))
     number_of_days = int(request.form.get('days'))
     if type(response_final) != type(dict({})):
         return jsonify([response_final])
@@ -54,7 +55,7 @@ def generate_itinerary():
         coordinate_dict = response_final['Response']['View'][0]['Result'][0]['Location']["NavigationPosition"][0]
         latitude, longitude = coordinate_dict['Latitude'], coordinate_dict['Longitude']
         location_response = requests.get(
-            f'https://places.ls.hereapi.com/places/v1/discover/search?at={latitude},{longitude}&r=100000&q=Landmark/Attraction&apiKey={secret_key}')
+            f'https://places.ls.hereapi.com/places/v1/discover/search?at={latitude},{longitude}&r=10000&q=Landmark/Attractions&apiKey={secret_key}')
         if location_response.status_code == 200:
             if len(location_response.json()['results']['items']) > 0:
                 tourist_data = location_response.json()
@@ -64,9 +65,9 @@ def generate_itinerary():
                     tourist_dict['latitude'].append(tourist_data['results']['items'][i]['position'][0])
                     tourist_dict['longitude'].append(tourist_data['results']['items'][i]['position'][1])
                 tourist_df = pd.DataFrame(tourist_dict)
+                print(tourist_df)
                 day_of_travel= fit_and_inference(tourist_df,number_of_days)
                 tourist_df['day_of_travel'] = day_of_travel
-                print(tourist_df)
                 return {'title': list(tourist_df['title']),'latitude': list(tourist_df['latitude']),
                         'longitude': list(tourist_df['longitude']), 'day_of_travel': list(tourist_df['day_of_travel'])}
 

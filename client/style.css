@@ -1,0 +1,18 @@
+body {
+    background: #dd5e89;
+    background: -webkit-linear-gradient(to left, #dd5e89, #f7bb97);
+    background: linear-gradient(to left, #dd5e89, #f7bb97);
+    min-height: 100vh;
+  }
+
+  .form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+  }
+
+  button{
+    background: linear-gradient(to left,  #f7bb97,#dd5e89);
+  }
+
+  #mapid { height: 500px; }
