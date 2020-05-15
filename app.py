@@ -128,7 +128,7 @@ def respond():
                     #               'longitude': list(tourist_df['longitude']),
                     #                'day_of_travel': list(tourist_df['day_of_travel'])})
                     tourist_df.sort_values(by='day_of_travel', inplace=True, axis=0)
-                    response = ''.join(f"Place:{tourist_df['title'].iloc[i]} \t Day: {df['day_of_travel'].iloc[i]}\n"
+                    response = ''.join(f"Place:{tourist_df['title'].iloc[i]} \t Day: {tourist_df['day_of_travel'].iloc[i]}\n"
                                        for i in range(len(tourist_df)))
 
                     bot.sendMessage(chat_id=chat_id, text=str(response), reply_to_message_id=msg_id)
