@@ -1,4 +1,5 @@
 def get_response(msg):
+    msg = msg.lower()
     if 'location' and 'days' not in msg:
         return 'Please enter your desired destination and number of days in the following format: \n ' \
                'location:<location> days:<number of days>'
