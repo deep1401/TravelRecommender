@@ -5,6 +5,7 @@ from flask_cors import CORS, cross_origin
 import pandas as pd
 from sklearn.cluster import MiniBatchKMeans
 from telegram.bot import Bot
+import telegram
 from telebot.credentials import bot_token, bot_user_name, URL
 from telebot.mastermind import get_response
 
