@@ -63,7 +63,8 @@ def generate_itinerary():
         coordinate_dict = response_final['Response']['View'][0]['Result'][0]['Location']["NavigationPosition"][0]
         latitude, longitude = coordinate_dict['Latitude'], coordinate_dict['Longitude']
         location_response = requests.get(
-            f'https://places.ls.hereapi.com/places/v1/discover/search?at={latitude},{longitude}&r=100000&q=Landmark/Attractions&apiKey={secret_key}')
+            f'https://places.ls.hereapi.com/places/v1/discover/search?at={latitude},{longitude}&r=100000&q=Landmark'
+            f'/Attractions&apiKey={secret_key}')
         if location_response.status_code == 200:
             if len(location_response.json()['results']['items']) > 0:
                 tourist_data = location_response.json()
