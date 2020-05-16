@@ -27,3 +27,7 @@ body {
   #tableDiv{
     display: none;
   }
+
+  #loading{
+    display: none;
+  }
