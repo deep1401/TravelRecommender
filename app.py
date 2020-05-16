@@ -67,7 +67,7 @@ def generate_itinerary():
         if location_response.status_code == 200:
             if len(location_response.json()['results']['items']) > 0:
                 tourist_data = location_response.json()
-                print(tourist_data)
+
                 tourist_dict = {'title': [], 'latitude': [], 'longitude': []}
                 for i in range(len(tourist_data['results']['items'])):
                     tourist_dict['title'].append(tourist_data['results']['items'][i]['title'])
