@@ -15,4 +15,15 @@ body {
     background: linear-gradient(to left,  #f7bb97,#dd5e89);
   }
 
-  #mapid { height: 500px; }
+  #map{
+    height: 600px;
+  
+  }
+
+  #mapDiv{
+    display: none;
+  }
+
+  #tableDiv{
+    display: none;
+  }
