@@ -22,7 +22,7 @@ OR
 Directly visit: https://touristbot-jd.herokuapp.com/
 
 ## Screenshots
-![](https://github.com/jaypajji4444/Screenshots/blob/master/newTravel/form.PN)
+![](https://github.com/jaypajji4444/Screenshots/blob/master/newTravel/form.PNG)
 ![](https://github.com/jaypajji4444/Screenshots/blob/master/newTravel/map.PNG)
 ![](https://github.com/jaypajji4444/Screenshots/blob/master/newTravel/itinary.PNG)
 
