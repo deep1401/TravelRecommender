@@ -89,7 +89,7 @@ const getResponse=async(data)=>{
     formData.append('days',data.days);
     formData.append("location",data.place)
 
-    const url="http://localhost:5000/generate";
+    const url="https://touristbot-jd.herokuapp.com//generate";
     const config={
         method:"POST",
         body:formData
