@@ -3,7 +3,7 @@ Web app and telegram Bot to recommend places and prepare an itinary of places to
 
 
 ## Screenshots
-![](https://github.com/jaypajji4444/Screeshots/blob/master/newTravel/form.PNG)
-![](https://github.com/jaypajji4444/Screeshots/blob/master/newTravel/map.PNG)
-![](https://github.com/jaypajji4444/Screeshots/blob/master/newTravel/itinary.PNG)
+![](https://github.com/jaypajji4444/Screenshots/blob/master/newTravel/form.PNG)
+![](https://github.com/jaypajji4444/Screenshots/blob/master/newTravel/map.PNG)
+![](https://github.com/jaypajji4444/Screenshots/blob/master/newTravel/itinary.PNG)
 
