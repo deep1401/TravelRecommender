@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ```
 python app.py
 ```
-Done! You are ready to rock by visiting : templates/index.html
+Done! You are ready to rock by visiting : http://localhost:5000
 
 ## Screenshots
 ![](https://github.com/jaypajji4444/Screenshots/blob/master/newTravel/form.PNG)
