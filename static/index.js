@@ -101,6 +101,7 @@ const getResponse=async(data)=>{
     }
     catch(err){
         loading.style.display="none";
+        alert("Sorry could not process your request...")
         console.log(err)
     }
 }
