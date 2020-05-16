@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 import requests
 from apikeys import apikey
 from flask_cors import CORS, cross_origin
@@ -48,8 +48,8 @@ def fit_and_inference(dataframe, number_of_days):
 
 @app.route('/')
 def hello_world():
-    print("hello")
-    return jsonify({"cool":"hello"})
+    
+    return render_template("index.html")
 
 
 @app.route('/generate', methods=['POST'])
