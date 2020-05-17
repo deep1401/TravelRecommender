@@ -39,9 +39,12 @@ def fit_and_inference(dataframe, number_of_days):
         df_matrix = df.values
         model.fit(df_matrix)
         predicted_labels = model.predict(df_matrix)
+    
+    elif number_of_days == 2:
+        predicted_labels = np.array([0] * len(dataframe))
 
     else:
-        predicted_labels = [0] * len(dataframe)
+        predicted_labels = np.array([i for i in range(len(dataframe))])
 
     return predicted_labels + 1
 
