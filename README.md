@@ -1,5 +1,5 @@
 # Travel-Recommender Telegram Bot
-Web app and telegram Bot to recommend places and prepare an itinary of places to visit on a paticular day based on location and vicinity
+Web app and telegram Bot to recommend places and prepare an itinerary of places to visit on a paticular day based on location and vicinity
 
 ## Telegram Bot Link
 Click this link for telegram bot
